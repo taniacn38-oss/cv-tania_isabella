@@ -1,0 +1,241 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --morado-oscuro: #45207a;
+    --morado: #6c3fc5;
+    --morado-claro: #9b7ede;
+    --lila: #eee6fa;
+    --fondo: #f7f3fc;
+    --blanco: #ffffff;
+    --texto: #292333;
+    --texto-suave: #66606f;
+    --borde: #e2d9ee;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.navbar {
+    background-color: var(--morado-oscuro) !important;
+    min-height: 60px;
+    box-shadow: 0 3px 12px rgba(69, 32, 122, 0.25);
+}
+
+.navbar-brand {
+    color: var(--blanco) !important;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.navbar-nav .nav-link {
+    color: #eee8f7 !important;
+    font-size: 0.95rem;
+    margin-left: 8px;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white !important;
+    transform: translateY(-1px);
+}
+
+.navbar-nav .nav-link.active {
+    color: white !important;
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.titulo-pagina {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-pagina h1 {
+    color: var(--morado-oscuro);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.titulo-pagina h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: var(--morado);
+    border-radius: 5px;
+    margin: 15px auto 0;
+}
+
+.titulo-pagina p {
+    color: var(--texto-suave);
+    font-size: 1.05rem;
+    margin-top: 15px;
+}
+
+.habilidades-seccion {
+    padding-top: 65px;
+    padding-bottom: 70px;
+}
+
+.habilidades-card {
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--blanco);
+    box-shadow: 0 5px 18px rgba(69, 32, 122, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habilidades-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(69, 32, 122, 0.17);
+}
+
+.habilidades-card .card-body {
+    padding: 35px;
+}
+
+.habilidades-card h2 {
+    color: var(--morado-oscuro);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.descripcion-card {
+    color: var(--texto-suave);
+    margin-bottom: 30px;
+}
+
+.habilidad {
+    margin-bottom: 25px;
+}
+
+.habilidad strong {
+    color: var(--morado-oscuro);
+    font-size: 1rem;
+}
+
+.habilidad .progress {
+    height: 25px;
+    margin-top: 8px;
+    background-color: #e3dced;
+    border-radius: 20px;
+}
+
+.habilidad .progress-bar {
+    background: linear-gradient(
+        90deg,
+        var(--morado-oscuro),
+        var(--morado-claro)
+    );
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tecnologias .badge {
+    margin: 0;
+    padding: 9px 14px;
+    font-size: 0.9rem;
+}
+
+.habilidades-card .list-group {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.habilidades-card .list-group-item {
+    padding: 12px 16px;
+    color: var(--texto);
+    border-color: var(--borde);
+}
+
+.habilidades-card .list-group-item:hover {
+    background-color: var(--lila);
+}
+
+footer {
+    background-color: var(--morado-oscuro) !important;
+    color: white !important;
+    padding: 30px 0;
+    margin-top: auto;
+    border-top: 4px solid var(--morado-claro);
+}
+
+footer p {
+    color: white;
+    margin: 0;
+}
+
+footer .btn {
+    margin: 4px;
+}
+
+@media (max-width: 768px) {
+    .titulo-pagina h1 {
+        font-size: 2rem;
+    }
+
+    .titulo-pagina p {
+        font-size: 1rem;
+    }
+
+    .habilidades-card .card-body {
+        padding: 25px;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .titulo-pagina h1 {
+        font-size: 1.8rem;
+    }
+
+    .habilidades-card .card-body {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 25px 15px;
+    }
+}

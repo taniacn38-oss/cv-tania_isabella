@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --morado-oscuro: #45207a;
+    --morado: #6c3fc5;
+    --morado-claro: #9b7ede;
+    --lila: #eee6fa;
+    --fondo: #f7f3fc;
+    --blanco: #ffffff;
+    --texto: #292333;
+    --texto-suave: #66606f;
+    --borde: #e2d9ee;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.navbar {
+    background-color: var(--morado-oscuro) !important;
+    min-height: 60px;
+    box-shadow: 0 3px 12px rgba(69, 32, 122, 0.25);
+}
+
+.navbar-brand {
+    color: var(--blanco) !important;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.navbar-nav .nav-link {
+    color: #eee8f7 !important;
+    font-size: 0.95rem;
+    margin-left: 8px;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white !important;
+    transform: translateY(-1px);
+}
+
+.navbar-nav .nav-link.active {
+    color: white !important;
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.titulo-pagina {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-pagina h1 {
+    color: var(--morado-oscuro);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.titulo-pagina h1::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: var(--morado);
+    border-radius: 5px;
+    margin: 15px auto 0;
+}
+
+.titulo-pagina p {
+    color: var(--texto-suave);
+    font-size: 1.05rem;
+    margin-top: 15px;
+}
+
+.contacto-seccion {
+    padding-top: 110px;
+    padding-bottom: 70px;
+}
+
+.contacto-card {
+    background-color: var(--blanco);
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 5px 18px rgba(69, 32, 122, 0.10);
+}
+
+.contacto-card h2 {
+    color: var(--morado-oscuro);
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.contacto-card .form-label {
+    color: var(--morado-oscuro);
+    font-weight: bold;
+}
+
+.contacto-card .form-control {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #d8cfe5;
+}
+
+.contacto-card .form-control:focus {
+    border-color: var(--morado);
+    box-shadow: 0 0 0 0.2rem rgba(108, 63, 197, 0.15);
+}
+
+.btn-primary {
+    background-color: var(--morado) !important;
+    border-color: var(--morado) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--morado-oscuro) !important;
+    border-color: var(--morado-oscuro) !important;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1ebe5d;
+    color: white;
+}
+
+footer {
+    background-color: var(--morado-oscuro) !important;
+    color: white !important;
+    padding: 30px 0;
+    margin-top: auto;
+    border-top: 4px solid var(--morado-claro);
+}
+
+footer p {
+    color: white;
+    margin: 0;
+}
+
+footer .btn {
+    margin: 4px;
+}
+
+@media (max-width: 768px) {
+    .titulo-pagina h1 {
+        font-size: 2rem;
+    }
+
+    .titulo-pagina p {
+        font-size: 1rem;
+    }
+
+    .contacto-card {
+        padding: 25px;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .titulo-pagina h1 {
+        font-size: 1.8rem;
+    }
+
+    .contacto-card {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 25px 15px;
+    }
+}
